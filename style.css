@@ -473,7 +473,7 @@ h2 > span:hover::after {
     flex-direction: column;
 }
 .team {
-    height: 600px;
+    height: 650px;
 }
 
 .team h2 {
@@ -583,9 +583,125 @@ figcaption a:nth-child(3) {
 }
 
 .person__footer {
+    color: #07575b;
     letter-spacing: 1px;
-    line-height: 20px;
+    line-height: 25px;
     padding: 10px;
     height: 70px;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+    /* Our Blog */
+.our-blog {
+    background: url('img/fonstola.ru_231908_1920x1200.jpg') no-repeat fixed;
+    /* height: 500px; */
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.our-blog .main-wrapper {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.our-blog::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* background-color: rgba(107, 107, 107, 0.3); */
+}
+
+.our-blog h2 > span {
+    color: rgb(230, 230, 230);
+    text-shadow: 4px 3px 2px #5f4d4d;
+}
+
+.our-blog h2 > span::after {
+    background-color: rgb(230, 230, 230);
+    top: 36px;
+}
+
+.our-blog__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 40px;
+    height: 550px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.our-blog__item {
+    width: 49%;
+    height: 267px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* margin: 0 10px 10px 0; */
+}
+
+.our-blog__item div:last-of-type {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    position: relative;
+}
+
+.our-blog__item div:last-of-type::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(230, 230, 230);
+    top: 100px;
+    left: -10px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.our-blog__item div:first-of-type {
+    overflow: hidden;
+    border-radius: 5px 0 0 5px;
+    position: relative;
+    z-index: -2;
+}
+
+.our-blog__item img {
+    filter: grayscale(.7);
+    width: 267px;
+    height: 100%;
+    transition: 1s;
+    border-radius: 5px 0 0 5px;
+}
+
+.our-blog__item:hover img {
+    transform: scale(1.02);
+    filter: grayscale(0);
+}
+
+.our-blog__item:hover .our-blog__item__text h2 {
+    text-decoration: underline;
+}
+
+.our-blog__item__text {
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .4s;
+}
+.our-blog__item__text h3 {
+    font-size: 15px;
+    color: rgb(134, 134, 134);
+}
+
+.our-blog__item__text h2 {
+    font-size: 19px;
 }
